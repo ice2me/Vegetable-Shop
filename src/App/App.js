@@ -1,5 +1,6 @@
 import Header from '../Header/Header'
-import Cards from '../Cards/Cards'
+import Cards from '../components/Cards/Cards'
+import Drawer from '../components/Drawer/Drawer'
 import './App.css'
 
 export default function App() {
@@ -7,6 +8,7 @@ export default function App() {
 		<div className="wrapper">
 			<Header />
 			<Cards />
+			<Drawer />
 		</div>
 	)
 }

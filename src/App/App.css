@@ -7,6 +7,7 @@
   transition: .7s ease-in-out;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: Inter;
 }
 
 *:before *:after {
@@ -28,9 +29,9 @@ html, body {
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
-  font-family: 'Raleway', sans-serif;
+  font-family: Inter;
   margin: 0 auto;
-  background-color: #E5E5E5;
+  background-color: #e6f6ff;
   outline: none;
   scroll-behavior: smooth;
 }
@@ -41,19 +42,15 @@ input::-ms-clear {
 
 input::-webkit-input-placeholder {
   color: grey;
-  padding: 10px;
   text-overflow: ellipsis;
 }
 
 input::-moz-placeholder {
-  color: grey;
-  padding: 10px;
   text-overflow: ellipsis;
 }
 
 input:-ms-input-placeholder {
   color: grey;
-  padding: 10px;
   text-overflow: ellipsis;
 }
 
@@ -69,6 +66,10 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+input:active, input:focus {
+  outline: none !important;
+}
+
 button:active, button:focus {
   outline: none !important;
 }
@@ -78,6 +79,7 @@ button::-moz-focus-inner {
 }
 
 button {
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -107,5 +109,6 @@ ul li {
   max-width: 1080px;
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: 85px auto 0;
+  position: relative;
 }
