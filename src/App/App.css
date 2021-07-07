@@ -112,3 +112,18 @@ ul li {
   margin: 85px auto 0;
   position: relative;
 }
+
+html:not(.touch-screen)::-webkit-scrollbar-track, html:not(.touch-screen) *::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar-thumb, html:not(.touch-screen) *::-webkit-scrollbar-thumb {
+  background: green;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  border: 1px solid #F3F3F3;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar, html:not(.touch-screen) *::-webkit-scrollbar {
+  width: 10px;
+}
