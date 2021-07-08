@@ -1,11 +1,22 @@
 import React from 'react'
 import './CardItem.css'
 import plus from '../../../img/plus.svg'
+import plusChecked from '../../../img/active.svg'
+import unliked from '../../../img/favorit-unliked.svg'
 
-export default function CardItem({ name, price, src, key, onClick }) {
+export default function CardItem({ name, price, src, key, onClickFavorite, onPlus }) {
+	const [isAdded, setIsAdded] = React.useState(false)
+	const onClickPlus = () => {
+		onPlus({name, price, src})
+		setIsAdded(!isAdded)
+	}
+
 
 	return (
 		<div className="card-item" key={key}>
+			<div className="card-item__favorite" onClick={onClickFavorite}>
+				<img src={unliked} alt="" />
+			</div>
 			<img src={src} alt={name} className="card-item__img" width={133} height={112} />
 			<p className="card-item__title">
 				{name}
@@ -19,9 +30,11 @@ export default function CardItem({ name, price, src, key, onClick }) {
 						{price} $
 					</b>
 				</div>
-				<button className="card-item__button" onClick={onClick}>
-					<img src={plus} alt="plus" width={11} height={11} />
-				</button>
+				<img
+					src={isAdded ? plusChecked : plus}
+					alt="plus"
+					className='card-item__button'
+					onClick={onClickPlus} />
 			</div>
 		</div>
 	)

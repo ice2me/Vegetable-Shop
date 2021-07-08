@@ -111,6 +111,8 @@ ul li {
   height: 100%;
   margin: 85px auto 0;
   position: relative;
+  -webkit-animation: closeAnimation 1s forwards;
+          animation: closeAnimation 1s forwards;
 }
 
 html:not(.touch-screen)::-webkit-scrollbar-track, html:not(.touch-screen) *::-webkit-scrollbar-track {
@@ -126,4 +128,22 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb, html:not(.touch-screen) *::-we
 
 html:not(.touch-screen)::-webkit-scrollbar, html:not(.touch-screen) *::-webkit-scrollbar {
   width: 10px;
+}
+
+@-webkit-keyframes closeAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,13 +1,11 @@
 import React from 'react'
 
-import'./Cards.css'
+import './Cards.css'
 
 import CardItem from './CardItem/CardItem'
 import search from '../../img/Search.svg'
 
-export default function Cards({ arr }) {
-
-
+export default function Cards({ arr, onAddToCard}) {
 	return (
 		<div className="cards">
 			<div className="cards-title">
@@ -18,20 +16,19 @@ export default function Cards({ arr }) {
 					<img src={search} alt="Search" />
 					<input placeholder="Search..." />
 				</div>
-
 			</div>
 			<div className="cards-block">
-				{arr.map((obj) => (
+				{arr.map((item) => (
 					<CardItem
-						name={obj.name}
-						price={obj.price}
-						src={obj.src}
-						key={obj.id}
-						onClick={() => console.log(obj)}
+						name={item.name}
+						price={item.price}
+						src={item.src}
+						key={item.id}
+						onClickFavorite={() => console.log('press favorite')}
+						onPlus={(obj) => onAddToCard(obj)}
 					/>
 				))}
 			</div>
-
 		</div>
 	)
 }

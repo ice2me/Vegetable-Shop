@@ -8,6 +8,7 @@
 	background-color: rgba(0, 0, 0, 0.5)
 	z-index: 8
 	border-radius: 20px
+	animation: drawerAnimation 1s forwards
 .drawer
 	width: 385px
 	height: 100%
@@ -22,6 +23,7 @@
 	cursor: default
 	overflow: hidden
 	border-radius: 20px
+	
 	&-title
 		font-family: Inter
 		font-style: normal
@@ -114,3 +116,9 @@
 			&:hover
 				img
 					transform: translateX(10px)
+@keyframes drawerAnimation
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+

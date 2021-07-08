@@ -9,6 +9,8 @@
   z-index: 8;
   -webkit-border-radius: 20px;
           border-radius: 20px;
+  -webkit-animation: drawerAnimation 1s forwards;
+          animation: drawerAnimation 1s forwards;
 }
 
 .drawer {
@@ -207,4 +209,22 @@
   -webkit-transform: translateX(10px);
       -ms-transform: translateX(10px);
           transform: translateX(10px);
+}
+
+@-webkit-keyframes drawerAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes drawerAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

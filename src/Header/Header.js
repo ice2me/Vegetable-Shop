@@ -5,7 +5,7 @@ import logo from '../img/logo.png'
 import basket from '../img/Basket.svg'
 import union from '../img/Union.svg'
 
-export default function Header() {
+export default function Header({onClickCard}) {
 	return (
 		<div className="header">
 			<a href="/" className="header-left">
@@ -15,7 +15,7 @@ export default function Header() {
 				</div>
 			</a>
 			<ul className="header-right">
-				<li>
+				<li onClick={onClickCard}>
 					<img src={basket} alt="basket" width={18} height={18} />
 					<span className="header-right__basket">
 						999.99 $
